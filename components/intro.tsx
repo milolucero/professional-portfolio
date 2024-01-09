@@ -10,7 +10,10 @@ import { HiDownload } from "react-icons/hi";
 
 export default function Intro() {
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section
+      id="home"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
       <div className="flex items-center justify-center flex-col">
         <div className="relative z-10">
           <motion.div
@@ -48,7 +51,7 @@ export default function Intro() {
         </div>
 
         <motion.div
-          className="rounded-md mt-3 relative overflow-hidden"
+          className="flex items-center justify-center rounded-md mt-3 relative overflow-hidden"
           initial={{ opacity: 0, y: -50, scale: 0 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{
@@ -64,9 +67,22 @@ export default function Intro() {
                 "linear-gradient(118deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 100%)",
             }}
           ></div>
-          <p className="pl-2 pr-3 py-1 text-sm font-medium">
-            <span style={{ textShadow: "0 0 1px #ffffff" }}>📍</span> Winnipeg,
-            Manitoba
+          <motion.div
+            className="pl-1 pr-1 inline-block"
+            style={{ textShadow: "0 0 1px #ffffff" }}
+            animate={{ y: [-24, 0, -12, 0, -8, 0, -4, 0, -2, 0] }}
+            transition={{
+              y: {
+                delay: 0.4,
+                duration: 1,
+                ease: "easeOut",
+              },
+            }}
+          >
+            📍
+          </motion.div>{" "}
+          <p className="leading-0 text-sm font-medium pr-3 py-1">
+            Winnipeg, Manitoba
           </p>
         </motion.div>
       </div>
