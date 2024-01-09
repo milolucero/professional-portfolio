@@ -3,14 +3,29 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import { personalDetails } from "@/lib/data";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
+  const { ref, inView } = useInView({
+    threshold: 1,
+  });
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection, timeOfLastClick]);
+
   return (
     <section
+      ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
@@ -25,8 +40,8 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/camilo-lucero.jpg"
-              alt="Camilo portrait"
+              src={personalDetails.profilePictureUrl}
+              alt={`${personalDetails.firstName} ${personalDetails.lastName} portrait`}
               width="300"
               height="300"
               quality="95"
@@ -82,7 +97,7 @@ export default function Intro() {
             📍
           </motion.div>{" "}
           <p className="leading-0 text-sm font-medium pr-3 py-1">
-            Winnipeg, Manitoba
+            {personalDetails.location}
           </p>
         </motion.div>
       </div>
@@ -92,10 +107,16 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Camilo.</span>
+        <span className="font-bold">
+          Hello, I'm {personalDetails.firstName}.
+        </span>
         <br />
-        I'm a <span className="font-bold">full-stack developer</span> who enjoys
-        building <span className="italic">apps and web platforms</span> using{" "}
+        I'm a{" "}
+        <span className="font-bold">
+          {personalDetails.title.toLowerCase()}
+        </span>{" "}
+        who enjoys building{" "}
+        <span className="italic">apps and web platforms</span> using{" "}
         <span className="underline">C# and React</span>.
       </motion.h1>
 
@@ -115,7 +136,7 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          href="/camilo-lucero-resume.pdf"
+          href={personalDetails.resumeUrl}
           download={true}
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
         >
@@ -123,14 +144,14 @@ export default function Intro() {
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a
-          href="https://www.linkedin.com/in/milolucero/"
+          href={personalDetails.linkedinUrl}
           target="_blank"
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >
           <BsLinkedin />
         </a>
         <a
-          href="https://github.com/milolucero"
+          href={personalDetails.githubUrl}
           target="_blank"
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10"
         >

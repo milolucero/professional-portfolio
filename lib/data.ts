@@ -6,6 +6,18 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
+export const personalDetails = {
+  firstName: "Camilo",
+  lastName: "Lucero",
+  email: "camilolucerodev@gmail.com",
+  title: "Full-Stack Developer",
+  location: "Winnipeg, Manitoba",
+  profilePictureUrl: "/camilo-lucero.jpg",
+  resumeUrl: "/camilo-lucero-resume.pdf",
+  linkedinUrl: "https://www.linkedin.com/in/milolucero/",
+  githubUrl: "https://github.com/milolucero",
+} as const;
+
 export const links = [
   {
     name: "Home",
