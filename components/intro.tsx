@@ -68,9 +68,9 @@ export default function Intro() {
             }}
           ></div>
           <motion.div
-            className="pl-1 pr-1 inline-block"
+            className="pl-2 pr-1 text-sm inline-block"
             style={{ textShadow: "0 0 1px #ffffff" }}
-            animate={{ y: [-24, 0, -12, 0, -8, 0, -4, 0, -2, 0] }}
+            animate={{ y: [-24, 0, -14, 0, -7, 0, -3, 0, -1, 0] }}
             transition={{
               y: {
                 delay: 0.4,
