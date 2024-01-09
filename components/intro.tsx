@@ -11,8 +11,8 @@ import { HiDownload } from "react-icons/hi";
 export default function Intro() {
   return (
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
-      <div className="flex items-center justify-center">
-        <div className="relative">
+      <div className="flex items-center justify-center flex-col">
+        <div className="relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -24,8 +24,8 @@ export default function Intro() {
             <Image
               src="/camilo-lucero.jpg"
               alt="Camilo portrait"
-              width="200"
-              height="200"
+              width="300"
+              height="300"
               quality="95"
               priority={true}
               className="h-28 w-28 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
@@ -46,19 +46,35 @@ export default function Intro() {
             👋
           </motion.span>
         </div>
+        <motion.div
+          className="rounded-md mt-3 shadow-sm relative overflow-hidden"
+          initial={{ opacity: 0, y: -50, scale: 0 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            type: "tween",
+            stiffness: 125,
+            delay: 0.1,
+            duration: 0.4,
+          }}
+        >
+          <div className="bg-white h-full w-full absolute -z-10 opacity-50 backdrop-blur-[0.5rem] rounded-md border border-slate-300"></div>
+          <p className="pl-2 pr-3 py-1 text-sm font-medium">
+            📍Winnipeg, Manitoba
+          </p>
+        </motion.div>
       </div>
 
-      <motion.p
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+      <motion.h1
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl max-w-[45rem]"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Camilo.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> based on{" "}
-        <span className="font-bold">Winnipeg, Manitoba</span>. I enjoy building{" "}
-        <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
-      </motion.p>
+        <span className="font-bold">Hello, I'm Camilo.</span>
+        <br />
+        I'm a <span className="font-bold">full-stack developer</span> who enjoys
+        building <span className="italic">apps and web platforms</span> using{" "}
+        <span className="underline">C# and React</span>.
+      </motion.h1>
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
