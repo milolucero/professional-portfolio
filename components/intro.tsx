@@ -46,20 +46,27 @@ export default function Intro() {
             👋
           </motion.span>
         </div>
+
         <motion.div
-          className="rounded-md mt-3 shadow-sm relative overflow-hidden"
+          className="rounded-md mt-3 relative overflow-hidden"
           initial={{ opacity: 0, y: -50, scale: 0 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{
             type: "tween",
-            stiffness: 125,
             delay: 0.1,
-            duration: 0.4,
+            duration: 0.3,
           }}
         >
-          <div className="bg-white h-full w-full absolute -z-10 opacity-50 backdrop-blur-[0.5rem] rounded-md border border-slate-300"></div>
+          <div
+            className="h-full w-full absolute -z-10 rounded-md"
+            style={{
+              background:
+                "linear-gradient(118deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 100%)",
+            }}
+          ></div>
           <p className="pl-2 pr-3 py-1 text-sm font-medium">
-            📍Winnipeg, Manitoba
+            <span style={{ textShadow: "0 0 1px #ffffff" }}>📍</span> Winnipeg,
+            Manitoba
           </p>
         </motion.div>
       </div>
