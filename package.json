@@ -10,18 +10,20 @@
   },
   "dependencies": {
     "clsx": "^2.1.0",
-    "framer-motion": "^10.17.9",
-    "next": "14.0.4",
+    "framer-motion": "^10.17.12",
+    "next": "^13.4.8",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
     "react-intersection-observer": "^9.5.3",
+    "react-vertical-timeline-component": "^3.6.0",
     "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
