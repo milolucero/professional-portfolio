@@ -5,3 +5,20 @@ export const isValidString = (value: unknown, maxLength: number) => {
 
   return true;
 };
+
+export const getErrorMessage = (error: unknown): string => {
+  let message: string;
+
+  if (error instanceof Error) {
+    message = error.message;
+  } else if (error && typeof error === "object" && "message" in error) {
+    message = String(error.message);
+  } else if (typeof error === "string") {
+    message = error;
+  } else {
+    console.log(error);
+    message = "Something went wrong. Unable to determine error message.";
+  }
+
+  return message;
+};
