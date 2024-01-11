@@ -6,10 +6,30 @@ html {
   --line-color: #e2e8f0; /* Used for the vertical timeline */
 }
 
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
 a.link {
   @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
 }
 
 .borderBlack {
   @apply border border-black/10;
+}
+
+.bg-gradient-custom {
+  background: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+}
+
+.dark .bg-gradient-custom {
+  background: linear-gradient(
+    118deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
 }

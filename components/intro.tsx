@@ -68,13 +68,7 @@ export default function Intro() {
             duration: 0.3,
           }}
         >
-          <div
-            className="h-full w-full absolute -z-10 rounded-md"
-            style={{
-              background:
-                "linear-gradient(118deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 100%)",
-            }}
-          ></div>
+          <div className="h-full w-full absolute -z-10 rounded-md bg-gradient-custom"></div>
           <motion.div
             className="pl-2 pr-1 text-sm inline-block"
             style={{ textShadow: "0 0 1px #ffffff" }}
@@ -89,7 +83,7 @@ export default function Intro() {
           >
             📍
           </motion.div>{" "}
-          <p className="leading-0 text-sm font-medium pr-3 py-1">
+          <p className="leading-0 text-sm font-medium pr-3 py-1 dark:font-normal">
             {personalDetails.location}
           </p>
         </motion.div>
@@ -135,7 +129,7 @@ export default function Intro() {
         <a
           href={personalDetails.resumeUrl}
           download={true}
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
         >
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
@@ -143,14 +137,14 @@ export default function Intro() {
         <a
           href={personalDetails.linkedinUrl}
           target="_blank"
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
         >
           <BsLinkedin />
         </a>
         <a
           href={personalDetails.githubUrl}
           target="_blank"
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
         >
           <FaGithubSquare />
         </a>
