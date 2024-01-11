@@ -9,7 +9,8 @@ import wordanalyticsImg from "@/public/wordanalytics.png";
 export const personalDetails = {
   firstName: "Camilo",
   lastName: "Lucero",
-  email: "camilolucerodev@gmail.com",
+  email: "camilolucerodev@gmail.com", // This email is associated with a Resend API account. Changing would require making a new Resend account with the matching email.
+  websiteName: "camilolucero.com",
   title: "Full-Stack Developer",
   location: "Winnipeg, Manitoba",
   profilePictureUrl: "/camilo-lucero.jpg",
