@@ -31,7 +31,7 @@ export default function Contact() {
         or through this form.
       </p>
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="mt-10 flex flex-col dark:text-white"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -48,17 +48,19 @@ export default function Contact() {
           type="email"
           required
           maxLength={500}
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-5 dark:border-2 dark:focus:border-gray-500 transition-all dark:outline-none"
           placeholder="Your email"
         />
         <textarea
           name="message"
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-5 dark:border-2 dark:focus:border-gray-500 dark:text-white transition-all dark:outline-none"
           placeholder="Your message"
           required
           maxLength={5000}
         />
-        <SubmitBtn />
+        <div className="flex justify-end">
+          <SubmitBtn />
+        </div>
       </form>
     </motion.section>
   );
