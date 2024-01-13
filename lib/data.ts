@@ -128,7 +128,7 @@ export const projectsData: Project[] = [
       "https://github.com/bits-and-bytes-association/bitsandbytesassociation.ca",
     demoUrl: "https://bitsandbytesassociation.ca/",
   },
-] as const;
+];
 
 export const skillsData = [
   "C#",
