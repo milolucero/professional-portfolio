@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useTransform } from "framer-motion";
 import { useScroll } from "framer-motion";
@@ -8,6 +8,8 @@ import { projectsData } from "@/lib/data";
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import { IoMdOpen } from "react-icons/io";
 import Link from "next/link";
+import ModalVideo from "react-modal-video";
+import "node_modules/react-modal-video/scss/modal-video.scss";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -17,7 +19,7 @@ export default function Project({
   tags,
   imageUrl,
   githubUrl,
-  videoUrl,
+  youtubeVideoId,
   demoUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,6 +30,8 @@ export default function Project({
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  const [isOpenVideo, setOpenVideo] = useState(false);
 
   return (
     <motion.div
@@ -43,10 +47,19 @@ export default function Project({
           <div className="flex items-center justify-between">
             <h3 className="text-2xl font-semibold">{title}</h3>
             <div className="flex text-nowrap gap-3">
-              {videoUrl ? (
-                <Link href={videoUrl} target="_blank" rel="noopener noreferrer">
-                  <FaYoutube className="text-2xl inline-block opacity-70 hover:opacity-100 hover:scale-110 cursor-pointer" />
-                </Link>
+              {youtubeVideoId ? (
+                <>
+                  <ModalVideo
+                    channel="youtube"
+                    youtube={{ mute: 0, autoplay: 0 }}
+                    videoId={youtubeVideoId}
+                    isOpen={isOpenVideo}
+                    onClose={() => setOpenVideo(false)}
+                  />
+                  <button onClick={() => setOpenVideo(true)}>
+                    <FaYoutube className="text-2xl inline-block opacity-70 hover:opacity-100 hover:scale-110 cursor-pointer" />
+                  </button>
+                </>
               ) : null}
               {githubUrl ? (
                 <Link

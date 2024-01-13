@@ -2,10 +2,21 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { StaticImageData } from "next/image";
 import beyouteeImg from "@/public/beyoutee-screenshot.png";
 import bookhubImg from "@/public/bookhub-screenshot.png";
 import lorappImg from "@/public/lorapp-screenshot.png";
 import bbaImg from "@/public/bba-screenshot.png";
+
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: StaticImageData;
+  youtubeVideoId?: string;
+  githubUrl?: string;
+  demoUrl?: string;
+};
 
 export const personalDetails = {
   firstName: "Camilo",
@@ -74,15 +85,13 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData = [
+export const projectsData: Project[] = [
   {
     title: "Be•YOU•tee",
     description:
       "A responsive web app that connects users with beauty service providers in their area, allowing them to browse services and schedule appointments directly at their homes.",
     tags: ["React", "Next.js", "Prisma", "Tailwind", "Geolocation"],
     imageUrl: beyouteeImg,
-    videoUrl: "",
-    githubUrl: "",
     demoUrl: "",
   },
   {
@@ -91,9 +100,7 @@ export const projectsData = [
       "Online bookstore web platform. This was a college project, I worked as a full-stack developer. Features shopping cart, checkout, payment processing, admin panel, and user authentication.",
     tags: ["Ruby On Rails", "APIs", "Active Admin", "Stripe", "AWS", "Docker"],
     imageUrl: bookhubImg,
-    videoUrl: "",
     githubUrl: "https://github.com/milolucero/rails_library",
-    demoUrl: "",
   },
   {
     title: "Lorapp",
@@ -109,9 +116,7 @@ export const projectsData = [
       "Product management",
     ],
     imageUrl: lorappImg,
-    videoUrl: "https://www.youtube.com/watch?v=zQsxzeDXFTc",
-    githubUrl: "",
-    demoUrl: "",
+    youtubeVideoId: "zQsxzeDXFTc",
   },
   {
     title: "Bits and Bytes Association",
@@ -119,7 +124,6 @@ export const projectsData = [
       "The website of my college's IT student association. I volunteered to make part of the development team, where I worked on the new website released on January 2024.",
     tags: ["React", "Next.js", "Tailwind", "Design systems"],
     imageUrl: bbaImg,
-    videoUrl: "",
     githubUrl:
       "https://github.com/bits-and-bytes-association/bitsandbytesassociation.ca",
     demoUrl: "https://bitsandbytesassociation.ca/",
