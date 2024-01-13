@@ -2,9 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import beyouteeImg from "@/public/beyoutee-screenshot.png";
+import bookhubImg from "@/public/bookhub-screenshot.png";
+import lorappImg from "@/public/lorapp-screenshot.png";
+import bbaImg from "@/public/bba-screenshot.png";
 
 export const personalDetails = {
   firstName: "Camilo",
@@ -48,73 +49,101 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Lorapp Co-founder",
+    location: "Bogota, Colombia",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Innovative e-book platform for university students. Within a small yet dynamic team, my role focused on the areas of business development, product management, UI/UX design, and front-end development.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2016 - 2018",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Back-end Developer (NodeJS)",
+    location: "Bogota, Colombia",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked on a cryptocurrency investment bot as a personal project. The bot identified arbitrage opportunities between exchange platforms and traded automatically when favorable conditions were met. Generated +$50,000 CAD over one year.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2019 - 2020",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "RRC - Business Information Technology",
+    location: "Winnipeg, Manitoba",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "This 2.5 year program provided a solid foundation in information technology with focus on desktop and web application development, database management, and IT infrastructure.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2021 - 2023",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Be•YOU•tee",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A responsive web app that connects users with beauty service providers in their area, allowing them to browse services and schedule appointments directly at their homes.",
+    tags: ["React", "Next.js", "Prisma", "Tailwind", "Geolocation"],
+    imageUrl: beyouteeImg,
+    videoUrl: "",
+    githubUrl: "",
+    demoUrl: "",
   },
   {
-    title: "rmtDev",
+    title: "BookHub",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Online bookstore web platform. This was a college project, I worked as a full-stack developer. Features shopping cart, checkout, payment processing, admin panel, and user authentication.",
+    tags: ["Ruby On Rails", "APIs", "Active Admin", "Stripe", "AWS", "Docker"],
+    imageUrl: bookhubImg,
+    videoUrl: "",
+    githubUrl: "https://github.com/milolucero/rails_library",
+    demoUrl: "",
   },
   {
-    title: "Word Analytics",
+    title: "Lorapp",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Award-winning innovative e-book library where university students in Latin America can rent e-book chapters on demand. This was a company I founded where I worked as the product manager and front-end developer.",
+    tags: [
+      "JavaScript",
+      "jQuery",
+      "Design systems",
+      "Sketch",
+      "Zeplin",
+      "MySQL",
+      "Product management",
+    ],
+    imageUrl: lorappImg,
+    videoUrl: "https://www.youtube.com/watch?v=zQsxzeDXFTc",
+    githubUrl: "",
+    demoUrl: "",
+  },
+  {
+    title: "Bits and Bytes Association",
+    description:
+      "The website of my college's IT student association. I volunteered to make part of the development team, where I worked on the new website released on January 2024.",
+    tags: ["React", "Next.js", "Tailwind", "Design systems"],
+    imageUrl: bbaImg,
+    videoUrl: "",
+    githubUrl:
+      "https://github.com/bits-and-bytes-association/bitsandbytesassociation.ca",
+    demoUrl: "https://bitsandbytesassociation.ca/",
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
+  "C#",
+  ".NET",
   "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
   "Node.js",
+  "APIs",
+  "Algorithms",
+  "SQL",
+  "AWS",
+  "Linux",
+  "Cybersecurity",
+  "UI/UX design",
+  "Figma",
+  "HTML",
+  "CSS",
   "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "Scrum",
 ] as const;
