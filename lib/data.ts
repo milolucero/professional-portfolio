@@ -28,7 +28,7 @@ type Award = {
 export const personalDetails = {
   firstName: "Camilo",
   lastName: "Lucero",
-  email: "camilolucerodev@gmail.com", // This email is associated with a Resend API account. Changing would require making a new Resend account with the matching email.
+  email: "camilolucerodev@gmail.com", // This email is associated with a Resend API account. Changing it would require making a new Resend account with the matching email.
   websiteName: "camilolucero.com",
   title: "Full-Stack Developer",
   location: "Winnipeg, Manitoba",
@@ -66,33 +66,6 @@ export const links = [
   {
     name: "Contact",
     hash: "#contact",
-  },
-] as const;
-
-export const experiencesData = [
-  {
-    title: "Lorapp Co-founder",
-    location: "Bogota, Colombia",
-    description:
-      "Innovative e-book platform for university students. Within a small yet dynamic team, my role focused on the areas of business development, product management, UI/UX design, and front-end development.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2016 - 2018",
-  },
-  {
-    title: "Back-end Developer (NodeJS)",
-    location: "Bogota, Colombia",
-    description:
-      "I worked on a cryptocurrency investment bot as a personal project. The bot identified arbitrage opportunities between exchange platforms and traded automatically when favorable conditions were met. Generated +$50,000 CAD over one year.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2020",
-  },
-  {
-    title: "RRC - Business Information Technology",
-    location: "Winnipeg, Manitoba",
-    description:
-      "This 2.5 year program provided a solid foundation in information technology with focus on desktop and web application development, database management, and IT infrastructure.",
-    icon: React.createElement(FaReact),
-    date: "2021 - 2023",
   },
 ] as const;
 
@@ -163,9 +136,36 @@ export const skillsData = [
   "Scrum",
 ] as const;
 
+export const experiencesData = [
+  {
+    title: "Lorapp Co-founder",
+    location: "Bogota, Colombia",
+    description:
+      "Innovative e-book platform for university students. Within a small yet dynamic team, my role focused on the areas of business development, product management, UI/UX design, and front-end development.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2016 - 2018",
+  },
+  {
+    title: "Back-end Developer (NodeJS)",
+    location: "Bogota, Colombia",
+    description:
+      "I worked on a cryptocurrency investment bot as a personal project. The bot identified arbitrage opportunities between exchange platforms and traded automatically when favorable conditions were met. Generated +$50,000 CAD over one year.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2019 - 2020",
+  },
+  {
+    title: "RRC - Business Information Technology",
+    location: "Winnipeg, Manitoba",
+    description:
+      "This 2.5 year program provided a solid foundation in information technology with focus on desktop and web application development, database management, and IT infrastructure.",
+    icon: React.createElement(FaReact),
+    date: "2021 - 2023",
+  },
+] as const;
+
 export const awardsData: Award[] = [
   {
-    title: "Honour Roll",
+    title: "Honours Graduate",
     issuedBy: "Red River College",
     date: "Dec 2023",
     description:

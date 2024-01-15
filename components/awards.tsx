@@ -8,7 +8,7 @@ import Award from "@/components/award";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Awards() {
-  const { ref } = useSectionInView("Skills");
+  const { ref } = useSectionInView("Awards");
 
   return (
     <section ref={ref} id="awards" className="scroll-mt-28 mb-20 sm:mb-28">

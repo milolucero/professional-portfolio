@@ -2,7 +2,7 @@ This is a professional portfolio website developed with Next.js and React.
 
 Visit the live version at [camilolucero.com](https://camilolucero.com/).
 
-# To run this project locally
+## To run this project locally
 
 First, run the development server:
 
