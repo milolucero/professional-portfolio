@@ -18,6 +18,13 @@ type Project = {
   demoUrl?: string;
 };
 
+type Award = {
+  title: string;
+  issuedBy: string;
+  date?: string;
+  description: string;
+};
+
 export const personalDetails = {
   firstName: "Camilo",
   lastName: "Lucero",
@@ -150,4 +157,49 @@ export const skillsData = [
   "CSS",
   "Git",
   "Scrum",
+] as const;
+
+export const awardsData: Award[] = [
+  {
+    title: "Honour Roll",
+    issuedBy: "Red River College",
+    date: "Dec 2023",
+    description:
+      "For outstanding academic performance on the Business Information Technology program - GPA 4.48",
+  },
+  {
+    title: "Sprint To Innovate - 4th place winner",
+    issuedBy: "City of Winnipeg",
+    date: "Apr 2022",
+    description:
+      "By proposing a cybersecurity awareness training app that uses gamification to prevent phishing attacks.",
+  },
+  {
+    title: "12 most innovative startups in Latin America",
+    issuedBy: "Inter-American Development Bank",
+    date: "Oct 2016",
+    description:
+      "The company I founded (Lorapp) was selected as one of the most innovative among +500 startups.",
+  },
+  {
+    title: "Most impactful innovation for the creative industry",
+    issuedBy: "El Dorado Festival",
+    date: "Jan 2016",
+    description:
+      "Awarded for the innovative business model provided to publishers and authors to the company I founded (Lorapp).",
+  },
+  {
+    title: "Student Entrepreneur of the Year",
+    issuedBy: "EO - Global Student Entrepreneur Awards",
+    date: "Nov 2014",
+    description:
+      "Premier global competition for students who own and operate a business. Selected as one of the most outstanding young entrepreneurs in Colombia.",
+  },
+  {
+    title: "Book mentions",
+    issuedBy: "Inter-American Development Bank, Del Rosario University",
+    date: "",
+    description:
+      "Featured as an entrepreneurial case of study in the books 'Orange Economy' by the Inter-American Development Bank and in 'Pedagogical innovation' by Del Rosario University.",
+  },
 ] as const;
