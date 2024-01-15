@@ -60,6 +60,10 @@ export const links = [
     hash: "#experience",
   },
   {
+    name: "Awards",
+    hash: "#awards",
+  },
+  {
     name: "Contact",
     hash: "#contact",
   },
@@ -165,7 +169,7 @@ export const awardsData: Award[] = [
     issuedBy: "Red River College",
     date: "Dec 2023",
     description:
-      "For outstanding academic performance on the Business Information Technology program - GPA 4.48",
+      "For outstanding academic performance on the Business Information Technology program - GPA 4.48 / 4.50",
   },
   {
     title: "Sprint To Innovate - 4th place winner",
@@ -202,4 +206,4 @@ export const awardsData: Award[] = [
     description:
       "Featured as an entrepreneurial case of study in the books 'Orange Economy' by the Inter-American Development Bank and in 'Pedagogical innovation' by Del Rosario University.",
   },
-] as const;
+];

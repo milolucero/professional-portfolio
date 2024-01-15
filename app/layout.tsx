@@ -12,7 +12,7 @@ import ThemeContextProvider from "@/context/theme-context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `${personalDetails.firstName} ${personalDetails.lastName} | Professional Portfolio`,
+  title: `${personalDetails.firstName} ${personalDetails.lastName} | Portfolio`,
   description: `${personalDetails.firstName} ${
     personalDetails.lastName
   } is a ${personalDetails.title.toLowerCase()} based in ${
