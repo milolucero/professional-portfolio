@@ -190,7 +190,7 @@ export const awardsData: Award[] = [
     issuedBy: "El Dorado Festival",
     date: "Jan 2016",
     description:
-      "Awarded for the innovative business model provided to publishers and authors to the company I founded (Lorapp).",
+      "Awarded for the innovative business model provided to publishers and authors by the company I founded (Lorapp).",
   },
   {
     title: "Student Entrepreneur of the Year",

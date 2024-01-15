@@ -1,5 +1,7 @@
 import { personalDetails } from "@/lib/data";
+import Link from "next/link";
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -12,6 +14,17 @@ export default function Footer() {
         <span className="font-semibold">About this website:</span> Built with
         React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
         Framer Motion, React Email & Resend, Vercel hosting.
+      </p>
+      <p className="text-xs mt-2 block">
+        <Link
+          className="link"
+          href="https://github.com/milolucero/professional-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub className="inline-block opacity-70 text-sm mr-1" />
+          View source on GitHub
+        </Link>
       </p>
     </footer>
   );

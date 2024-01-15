@@ -36,6 +36,7 @@ export default function About() {
           href="https://www.rrc.ca/explore/program/application-development-and-delivery/"
           className="link"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Business Information Technology
         </Link>{" "}
