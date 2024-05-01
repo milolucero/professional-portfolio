@@ -27,7 +27,7 @@ export default function Award({
   };
   return (
     <motion.article
-      className="pt-4 px-8 pb-5 bg-gray-100 max-w-[33rem] border border-black/5 rounded-lg  dark:text-white dark:bg-slate-800"
+      className="pt-4 px-8 pb-5 bg-gray-100 max-w-[33rem] border border-black/5 rounded-lg dark:text-white dark:bg-slate-800"
       key={title}
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}

@@ -89,7 +89,7 @@ export const projectsData: Project[] = [
   {
     title: "Lorapp",
     description:
-      "Award-winning innovative e-book library where university students in Latin America can rent e-book chapters on demand. This was a company I founded where I worked as the product manager and front-end developer.",
+      "Award-winning innovative e-book library where university students in Latin America can rent e-book chapters on demand. This was a company I founded where I worked as product manager and front-end developer.",
     tags: [
       "JavaScript",
       "jQuery",
@@ -142,15 +142,15 @@ export const experiencesData = [
     location: "Bogota, Colombia",
     description:
       "Innovative e-book platform for university students. Within a small yet dynamic team, my role focused on the areas of business development, product management, UI/UX design, and front-end development.",
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(CgWorkAlt),
     date: "2016 - 2018",
   },
   {
     title: "Back-end Developer (NodeJS)",
     location: "Bogota, Colombia",
     description:
-      "I worked on a cryptocurrency investment bot as a personal project. The bot identified arbitrage opportunities between exchange platforms and traded automatically when favorable conditions were met. Generated +$50,000 CAD over one year.",
-    icon: React.createElement(CgWorkAlt),
+      "Developed a cryptocurrency investment bot as a personal project. The bot identified arbitrage opportunities between exchange platforms and traded automatically when favorable conditions were met. Generated +$50,000 CAD over one year.",
+    icon: React.createElement(FaReact),
     date: "2019 - 2020",
   },
   {
@@ -158,7 +158,7 @@ export const experiencesData = [
     location: "Winnipeg, Manitoba",
     description:
       "This 2.5 year program provided a solid foundation in information technology with focus on desktop and web application development, database management, and IT infrastructure.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(LuGraduationCap),
     date: "2021 - 2023",
   },
 ] as const;

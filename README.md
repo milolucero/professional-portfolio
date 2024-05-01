@@ -1,4 +1,4 @@
-This is a professional portfolio website developed with Next.js and React.
+Professional portfolio website developed with Next.js and React.
 
 Visit the live version at [camilolucero.com](https://camilolucero.com/).
 
